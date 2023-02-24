@@ -3,17 +3,12 @@
 This package helps users transcribes drum audio hits into 6 classes - Hihat, Crash, Kick Drum, Snare, Ride, and Toms.
 
 
-## Installation
+## Dependenccies
 
 Run the following to install the python dependencies:
 
 ```
-pip install librosa tensorflow numpy pandas scikit-learn
-```
-
-To install this package via pip, run:
-```
-pip install drum-transcriber
+pip install librosa tensorflow numpy pandas scikit-learn streamlit streamlit-player
 ```
 
 ## Usage
@@ -31,4 +26,18 @@ transcriber = DrumTranscriber()
 predictions = transcriber.predict(samples, sr)
 ```
 
-## Demo
+### For Streamlit
+
+cd to the parent directory and run the following command:
+```
+streamlit run frontend.py
+```
+A localhost website will appear with the demo app.
+
+
+## Getting Started
+
+1. Clone/Zip the directory
+2. Redownload the model .h5 file from `/model/drum_transcriber.h5`
+
+**Note**: There is an issue with Github zipping the .h5 model file. To properly get the model to work, I suggest downloading the model file directly to replace the model from the clone/zipped folder.

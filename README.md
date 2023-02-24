@@ -2,7 +2,7 @@
 
 This package helps users transcribes drum audio hits into 6 classes - Hihat, Crash, Kick Drum, Snare, Ride, and Toms.
 
-![demo]('https://github.com/yoshi-man/DrumTranscriber/blob/main/assets/demo.gif?raw=true')
+![demo](https://github.com/yoshi-man/DrumTranscriber/blob/main/assets/demo.gif?raw=true)
 
 
 

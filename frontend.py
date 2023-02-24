@@ -54,7 +54,8 @@ transcriber = initialise_transcriber()
 
 st.title('Drum Transcriber Demo')
 
-input = st.text_input('Input youtube link here')
+input = st.text_input('Input youtube link here',
+                      value='https://www.youtube.com/watch?v=4SDBJp_B5qQ')
 start_from = st.number_input(label='Start from (in seconds)', min_value=0)
 
 if input:

@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/DrumTranscriber/__init__.py
+src/DrumTranscriber/utils/__init__.py
+src/DrumTranscriber/utils/audio_utils.py
+src/DrumTranscriber/utils/config.py
+src/drum_transcriber.egg-info/PKG-INFO
+src/drum_transcriber.egg-info/SOURCES.txt
+src/drum_transcriber.egg-info/dependency_links.txt
+src/drum_transcriber.egg-info/top_level.txt

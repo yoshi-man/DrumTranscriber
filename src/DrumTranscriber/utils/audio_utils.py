@@ -1,11 +1,8 @@
-from PIL import Image
 import librosa
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
-from audiomentations import Compose, TimeMask, Shift, AddGaussianNoise, PitchShift, Gain
-from utils.config import SETTINGS
 
-import matplotlib.pyplot as plt
+from utils.config import SETTINGS
 
 
 def fix_audio_length(samples: np.array, sr: int, length: int) -> np.array:
@@ -89,44 +86,3 @@ def get_mel_spectrogram(samples: np.array, sr: int = 44100, target_shape=SETTING
     scaler = MinMaxScaler(feature_range=(0, 1))
 
     return scaler.fit_transform(mel_in_db)
-
-
-def apply_augmentation(samples):
-    """
-    :param samples (np.array): samples array of the audio
-    :return augmented (np.array): np.array containing samples of augmented audio
-    """
-    gaussian_noise = AddGaussianNoise(
-        min_amplitude=SETTINGS["GAUSSIAN_MIN_AMP"],
-        max_amplitude=SETTINGS["GAUSSIAN_MAX_AMP"],
-        p=0.5
-    )
-
-    time_mask = TimeMask(
-        min_band_part=SETTINGS["MASK_MIN_BAND"],
-        max_band_part=SETTINGS["MASK_MAX_BAND"],
-        fade=True,
-        p=0.5
-    )
-
-    time_shift = Shift(
-        min_fraction=SETTINGS["SHIFT_MIN"],
-        max_fraction=SETTINGS["SHIFT_MAX"],
-        rollover=False,
-        fade=True,
-        p=0.5
-    )
-
-    pitch_shift = PitchShift(
-        min_semitones=SETTINGS["PITCH_MIN"],
-        max_semitones=SETTINGS["PITCH_MAX"],
-        p=0.25
-    )
-
-    gain = Gain(p=0.5)
-
-    augmenter = Compose(
-        [time_shift, gain, pitch_shift, time_mask, gaussian_noise])
-
-    return augmenter(samples=samples,
-                     sample_rate=44100)

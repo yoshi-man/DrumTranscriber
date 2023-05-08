@@ -41,6 +41,6 @@ A localhost website will appear with the demo app.
 ## Getting Started
 
 1. Clone/Zip the directory
-2. Redownload the model .h5 file from `/model/drum_transcriber.h5`
+2. Redownload the model .h5 file from `/model/drum_transcriber.h5` (https://drive.google.com/file/d/1w2fIHeyr-st3sbk1PYrtGOYW6YAD1fsi/view?usp=sharing)
 
-**Note**: There is an issue with Github zipping the .h5 model file. To properly get the model to work, I suggest downloading the model file directly to replace the model from the clone/zipped folder.
+**Note**: There is an issue with Github zipping the .h5 model file. To properly get the model to work, I suggest downloading the model file from the Google Drive above and directly to replace the model from the clone/zipped folder. 

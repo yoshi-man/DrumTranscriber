@@ -1,5 +1,5 @@
-tensorflow==2.12.0rc0
-keras==2.12.0rc1
+tensorflow-macos<=2.11.0
+keras<2.12.0
 scikit-learn==1.2.1
 librosa==0.10.0
 streamlit-player==0.1.5
